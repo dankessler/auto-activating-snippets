@@ -295,7 +295,7 @@ This does not set any default keymaps. For that use
   :init-value nil
   :group 'aas
   (if aas-mode
-      (add-hook 'post-self-insert-hook #'aas-post-self-insert-hook 0 t)
+      (add-hook 'post-self-insert-hook #'aas-post-self-insert-hook 'deep t)
     (remove-hook 'post-self-insert-hook #'aas-post-self-insert-hook t)))
 
 ;;;###autoload
